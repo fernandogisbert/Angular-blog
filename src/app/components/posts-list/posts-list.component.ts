@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AllArticlesService } from 'src/app/services/all-articles.service';
 
 @Component({
   selector: 'app-posts-list',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private todosarticulos: AllArticlesService) {
+
+  }
+
+  publicaciones:any = this.todosarticulos.getInfo();
 
   ngOnInit(): void {
   }

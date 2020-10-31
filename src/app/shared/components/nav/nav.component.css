@@ -1,0 +1,10 @@
+.navegador__list{
+    display:flex;
+    padding-left:0;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.navegador__item {
+    margin-left:2rem;
+}

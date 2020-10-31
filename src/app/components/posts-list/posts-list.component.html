@@ -1,1 +1,10 @@
-<p>posts-list works!</p>
+<div class="container">
+    <h1 class="text-center">Listado de artículos</h1>
+    <div *ngFor="let publicacion of publicaciones">
+
+        <h2>{{publicacion.nombre}}</h2>
+        <img class="article__img" src={{publicacion.imagen}} alt="">
+        <p>{{publicacion.articulo}}</p>
+
+    </div>
+</div>

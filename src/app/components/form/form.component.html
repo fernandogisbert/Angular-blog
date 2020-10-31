@@ -19,13 +19,13 @@
                 <input 
                     type="text" 
                     class="form-control"
-                    placeholder="Copia la ruta de una de imagen"
+                    placeholder="Copia la URl  de una de imagen"
                     formControlName="imagen"
                     [class.is-invalid]="imgInvalida"
                     [class.is-valid]="imgValida"
 
                 >
-                <small *ngIf="imgInvalida" class="form-text text-danger">Debes introducir una imagen</small>
+                <small *ngIf="imgInvalida" class="form-text text-danger">Debes introducir una URl de una imagen</small>
                 </div>
                 <div class="form-group">
                     <label>Artículo</label>

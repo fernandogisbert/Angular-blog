@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { FormComponent } from './components/form/form.component';
 import { PostComponent } from './components/post/post.component';
+import { NavComponent } from './shared/components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
     FormComponent,
-    PostComponent
+    PostComponent,
+    NavComponent
     
   ],
   imports: [

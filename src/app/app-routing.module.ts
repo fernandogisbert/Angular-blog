@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'postslist', component: PostsListComponent},
   {path: 'post', component: PostComponent},
   {path: 'form', component: FormComponent},
-  {path: '**', redirectTo: 'form'}
+  {path: '**', redirectTo: 'postslists'}
 ];
 
 @NgModule({

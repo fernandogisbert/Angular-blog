@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { AllArticlesService } from 'src/app/services/all-articles.service';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +11,8 @@ export class FormComponent implements OnInit {
 
   FormNewPost: FormGroup
 
-  constructor(private formConstructor: FormBuilder) { 
+  constructor(private formConstructor: FormBuilder,
+              private arrayContent: AllArticlesService) { 
 
     this.camposFormurio()
   }
@@ -41,9 +43,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  publicar():void{
-    console.log(this.FormNewPost.value)
-  }
+ 
 
   // validaciones inputs
 
@@ -63,5 +63,23 @@ export class FormComponent implements OnInit {
 
   get articuloInvalido():boolean {
     return this.FormNewPost.get('articulo').invalid && this.FormNewPost.get('articulo').touched
+  }
+
+
+  publicar():void{
+    let formularioLleno = this.FormNewPost.value;
+    let arrayData = this.arrayContent.getInfo();
+
+    arrayData.push(formularioLleno);
+    
+    // this.FormNewPost.reset();
+
+    // setTimeout(() =>{
+    //   let todosArticulos = this.arrayContent.allArticles();
+    //   todosArticulos.push(arrayData);
+    //   console.log(todosArticulos);
+
+    // },5000);
+    // console.log(arrayData);
   }
 }
