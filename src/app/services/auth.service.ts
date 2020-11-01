@@ -12,6 +12,7 @@ export class AuthService {
     if(user.usuario === 'escritor@articulos.com' && user.password === 'misarticulos'){
       localStorage.setItem('auth', 'true');
       return true;
+      
     }else {
       return false;
     }
