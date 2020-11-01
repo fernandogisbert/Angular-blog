@@ -71,15 +71,11 @@ export class FormComponent implements OnInit {
     let arrayData = this.arrayContent.getInfo();
 
     arrayData.push(formularioLleno);
+
+    console.log(arrayData);
     
-    // this.FormNewPost.reset();
+    this.FormNewPost.reset();
 
-    // setTimeout(() =>{
-    //   let todosArticulos = this.arrayContent.allArticles();
-    //   todosArticulos.push(arrayData);
-    //   console.log(todosArticulos);
-
-    // },5000);
-    // console.log(arrayData);
+  
   }
 }

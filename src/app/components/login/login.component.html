@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="text-center">Iniciar sesión</h1>
+    <form autocomplete="off"  (ngSubmit)="acceder(formdata)" #formdata="ngForm">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input 
+                type="text" 
+                class="form-control"
+                placeholder="Usuario"
+                name="usuario"
+                [(ngModel)]="user.usuario"   
+            >
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input 
+                type="password" 
+                class="form-control"
+                placeholder="contraseña"
+                name="password"
+                [(ngModel)]="user.password"
+            >
+            </div>
+        <button class="btn btn-info btn-block"type="submit">Acceder</button>
+    </form>
+</div>
