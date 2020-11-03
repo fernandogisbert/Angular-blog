@@ -1,6 +1,6 @@
 <div class="formula">
     <div class="container">
-        <h1 class="text-center">Nuevo Artículo</h1>
+        <h1 class="text-center margin-top">Nuevo Artículo</h1>
         <form autocomplete="off" [formGroup]="FormNewPost" (ngSubmit)="publicar()">
             <div class="form-group">
             <label>Título</label>
@@ -41,10 +41,10 @@
                     <small *ngIf="articuloInvalido" class="form-text text-danger">Debes introducir más contenido</small>
                     </div>
                 <h2>Etiquetas</h2>
-                <div formArrayName="etiquetas" class="d-flex justify-content-around flex-wrap">
+                <div formArrayName="etiquetas" class="d-flex justify-content-start flex-wrap">
                     <!-- recorremos la lista con un for -->
                     <div class="d-flex mb-3" *ngFor="let etiqueta of etiquetas.controls; let i = index">
-                        <div class="mr-3">{{i + 1}}</div>
+                        <div class="mr-3 ml-2">{{i + 1}}</div>
                         <div>
                             <input 
                                 class="form-control" 
@@ -69,7 +69,7 @@
                     </button>
                 <hr>
            
-            <button type="submit" class="btn btn-primary btn-block">Publicar</button>
+            <button type="submit" class="btn btn-primary btn-block mb-5">Publicar</button>
         </form>
     </div>
 </div>

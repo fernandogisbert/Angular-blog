@@ -1,3 +1,12 @@
+.background__nav {
+    background-color: #D9F4C7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+}
+
 .navegador__list{
     display:flex;
     padding-left:0;
@@ -7,4 +16,16 @@
 
 .navegador__item {
     margin-left:2rem;
+}
+
+.active {
+    background-color:red;
+    color:white;
+
+}
+
+.navegador__link:hover {
+    background-color:red;
+    color:white;
+    text-decoration: none;
 }
