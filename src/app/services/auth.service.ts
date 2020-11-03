@@ -10,7 +10,7 @@ export class AuthService {
 
   login(user: UserModel){
     if(user.usuario === 'escritor@articulos.com' && user.password === 'misarticulos'){
-      localStorage.setItem('auth', 'true');
+      sessionStorage.setItem('auth', 'true');
       return true;
       
     }else {
@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   isAuth(): boolean {
-    if (localStorage.getItem('auth') === 'true'){
+    if (sessionStorage.getItem('auth') === 'true'){
       return true;
     }else{
       return false;
